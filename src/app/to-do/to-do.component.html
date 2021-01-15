@@ -1,0 +1,20 @@
+<section>
+    <form #taskDetails="ngForm" (ngSubmit)="storeTask(taskDetails.value)">
+        <div class="container">
+            <h3>Enter the details of the task</h3>
+            <input type="text" ngModel name="TaskName" class="mt-2 mb-4 " id="taskName" placeholder="Enter task name" required> <br>
+            <p>Please select Task type</p>
+            <select ngModel name="taskType" id="taskCategory" class="mb-2">
+                <option disabled hidden selected> Choose task type</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+            </select>
+            <p class="mt-2 mb-2"> Please select a end date for task </p>
+            <input type="date" ngModel name="endDate" class="mt2 mb-2" id="endD" required>
+            <div id="error"></div>
+            <br>
+            <button class="btn btn-primary">Save</button>
+            <button type="reset" id="reset" class="btn btn-danger">Reset</button>
+        </div>
+    </form>
+</section>

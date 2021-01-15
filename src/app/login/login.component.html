@@ -1,0 +1,19 @@
+<section>
+    <div class="container">
+        <form action="">
+            <div>
+                <div class="form-group">
+                    <label for="">Email-Id</label>
+                    <input type="text" class="form-control" #username required>
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" #password required>
+                </div>
+                <div id="error"></div>
+                <input type="submit" class="btn" (click)="check(username.value, password.value)" value="Login">
+                <p class="accAsk">Don't have a acoount ? <a href="#" routerLink="/register" routerLinkActive="active">Create one</a></p>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+<div class="container">
+    <form action="" #form="ngForm">
+        <div class="box">
+            <label for="name">Name -</label> <input class="input" ngModel type="text" [(ngModel)]="name" name="name" id="naam" [disabled]="edit"><br> <br>
+
+            <label for="gender">Gender -</label>
+            <select name="gender" id="gen" ngModel [disabled]="edit" [(ngModel)]="gender">
+                <option selected hidden disabled *ngFor="let gen of loopData" [ngValue]="gen.gender" >
+                    {{ gen.gender }}
+                </option>
+                <option value="Male"> Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <br>
+
+            <label for="address" id="addrlabel">Address -</label> <br><textarea class="input" ngModel name="address" [(ngModel)]="address" id="addr" cols="30" rows="10" [disabled]="edit"></textarea>
+            <br>
+            <div class="btn">
+                <button class="btn btn-info" (click)="allow()">Edit</button> &nbsp; &nbsp;
+                <button class="btn btn-info" (click)="editData(form.value)">Save</button>
+                <div id="error"></div>
+            </div>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,10 @@
+<header>
+    <h3 id="head">Start Adding your Tasks </h3>
+    <ul>
+
+        <li><a href="#" routerLink="/dashboard" routerLinkActive="active"><button type="button" class="btn btn-light">Dashboard</button></a></li>
+        <span *ngIf="logOutBtn">
+            <li><a href="#" routerLink="/login" routerLinkActive="active"><button type="button"  (click)="logOut()" class="btn btn-light">Log-out</button></a></li>
+        </span>
+    </ul>
+</header>

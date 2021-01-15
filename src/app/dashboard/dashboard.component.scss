@@ -1,0 +1,39 @@
+table {
+    width: 340px;
+}
+
+td,
+th {
+    padding: 5px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(248, 244, 239);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(136, 240, 240);
+}
+
+section {
+    height: 500px;
+}
+
+table {
+    width: 920px;
+}
+
+.display {
+    width: 700px;
+    margin: auto;
+    margin-left: 350px;
+    display: block;
+    height: 500px;
+}
+
+.msg {
+    width: 138px;
+    margin: auto;
+    margin-top: 50px;
+}

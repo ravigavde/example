@@ -1,0 +1,39 @@
+<div class="container">
+    <form #registerForm="ngForm">
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" ngModel name="name" placeholder="Enter Your Name" #name required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" ngModel placeholder="Enter Email" name="email" #email required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" ngModel placeholder="Enter Password" name="psw" #psw required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" ngModel placeholder="Repeat Password" name="pswRepeat" #pRepeat required>
+
+        <label for="gender"><b>Select Gender</b></label> &nbsp;&nbsp;&nbsp;
+        <select name="gender" ngModel id="">
+            <option [selected] disabled hidden>Select a gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <br>
+
+        <textarea placeholder="ENter address" name="address" ngModel id="addr" cols="30" rows="10" required></textarea>
+
+        <hr>
+        <div id="error"></div>
+        <button class="registerbtn" type="submit" (click)="register(registerForm.value)">Register</button>
+    </form>
+</div>
+
+<div class="container signin">
+    <p>Already have an account? <a href="#" routerLink="/login" routerLinkActive="active">Sign in</a>.</p>
+</div>

@@ -1,0 +1,22 @@
+header {
+    height: 100px;
+    width: 100%;
+    padding-top: 10px;
+    clear: both;
+    background-color: rgba(0, 0, 0, .8);
+    color: whitesmoke;
+}
+
+li {
+    display: inline-block;
+    margin: 5px;
+}
+
+ul {
+    float: right;
+    padding-right: 20px;
+}
+
+h3 {
+    padding-left: 20px;
+}

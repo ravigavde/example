@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="display">
+    <table border="1">
+        <tr>
+            <th>Task Name</th>
+            <th>Task Category</th>
+            <th>End Date</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let items of userData">
+            <td>{{items.TaskName}}</td>
+            <td>{{items.taskType}}</td>
+            <td>{{items.endDate}}</td>
+            <td><button class="btn btn-primary" [id]="items.TaskName + '0'" (click)="edit($event.target.id)">Edit</button></td>
+            <td><button [id]="items.TaskName" (click)="delete($event.target.id)" class="btn btn-primary">Delete</button></td>
+        </tr>
+    </table>
+    <div class="msg" *ngIf="userData.length == 0">No Data to display</div>
+</div>

@@ -1,0 +1,40 @@
+    .container {
+        width: 100%;
+        height: 600px;
+    }
+    
+    .box {
+        height: 500px;
+        margin: 50px;
+        background-color: rgb(250, 244, 237);
+        padding: 30px;
+        border-radius: 20px;
+    }
+    
+    .input,
+    #gen {
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 20px;
+        outline: none;
+        margin-left: 30px;
+    }
+    
+    #gen {
+        margin-left: 20px;
+    }
+    
+    #addr {
+        margin-left: 110px;
+    }
+    
+    #addrlabel {
+        position: relative;
+        left: 2px;
+        top: 41px;
+    }
+    
+    label {
+        font-size: 24px;
+    }
